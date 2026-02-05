@@ -2,3 +2,5 @@ idea.md
 reference papers/
 
 data/
+
+__pycache__/
