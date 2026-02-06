@@ -20,11 +20,11 @@ except ImportError:
         raise SystemExit(1)
 
 # 配置输出路径
-output = './data/structured/'
+output = './data/raw/'
 if not os.path.exists(output):
     os.makedirs(output)
 
-venue_id = 'ICLR.cc/2026/Conference'
+venue_id = 'NeurIPS.cc/2023/Conference'
 
 def extract_paper_info(note):
     """提取论文信息"""
@@ -71,9 +71,9 @@ else:
         paper_info = extract_paper_info(note)
         if paper_info:
             print(f"已提取: {paper_info['id']} - {paper_info['title'][:30]}...")
-            if 'http' in paper_info.get('abstract'):
+            if 'https://github.com/' in paper_info.get('abstract'):
                 abstract = paper_info.get('abstract')
-                index = abstract.index('http')
+                index = abstract.index('https://github.com/')
                 url = abstract[index:]
                 if url[-1] == '.':
                     url = url[:-1]
@@ -81,7 +81,7 @@ else:
                 papers_data.append(paper_info)
 
     # 保存为 JSON 文件
-    output_file = os.path.join(output, 'iclr_papers_2026.json')
+    output_file = os.path.join(output, 'neurips_papers_2023.json')
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(papers_data, f, ensure_ascii=False, indent=2)
     
