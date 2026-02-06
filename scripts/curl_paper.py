@@ -24,8 +24,7 @@ output = './data/structured/'
 if not os.path.exists(output):
     os.makedirs(output)
 
-# 会议 ID (ICLR 2025 使用 API V2)
-venue_id = 'NeurIPS.cc/2025/Conference'
+venue_id = 'ICLR.cc/2026/Conference'
 
 def extract_paper_info(note):
     """提取论文信息"""
@@ -82,7 +81,7 @@ else:
                 papers_data.append(paper_info)
 
     # 保存为 JSON 文件
-    output_file = os.path.join(output, 'aaai_papers_2025.json')
+    output_file = os.path.join(output, 'iclr_papers_2026.json')
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(papers_data, f, ensure_ascii=False, indent=2)
     
