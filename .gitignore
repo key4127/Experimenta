@@ -4,3 +4,8 @@ notes/
 data/
 
 __pycache__/
+
+# reference
+DocAgent/
+DeepWiki/
+repo/
