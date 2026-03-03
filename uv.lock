@@ -598,6 +598,7 @@ dependencies = [
     { name = "ollama" },
     { name = "openreview-py" },
     { name = "torch" },
+    { name = "tqdm" },
 ]
 
 [package.metadata]
@@ -609,6 +610,7 @@ requires-dist = [
     { name = "ollama", specifier = ">=0.6.1" },
     { name = "openreview-py", specifier = ">=1.56.1" },
     { name = "torch", specifier = ">=2.10.0" },
+    { name = "tqdm", specifier = ">=4.67.3" },
 ]
 
 [[package]]

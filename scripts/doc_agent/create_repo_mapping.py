@@ -70,10 +70,13 @@ def create_mapping(papers: List[dict], repos_base_dir: str, output_file: str) ->
 
 
 def main():
-    p = argparse.ArgumentParser(description="生成 code_url -> 本地路径 映射")
-    p.add_argument("--data-dir", default="data/raw", help="论文 JSON 所在目录")
-    p.add_argument("--repos-dir", required=True, help="仓库根目录")
-    p.add_argument("--output", default="data/repo_mapping.json", help="输出 JSON 路径")
+    p = argparse.ArgumentParser(
+        description="生成 code_url -> 本地路径 映射",
+        epilog="用法: python -m scripts.doc_agent.create_repo_mapping --repos-dir ./repo [--data-dir data/raw] [--output data/repo_mapping.json]",
+    )
+    p.add_argument("--data-dir", "-i", default="data/raw", help="论文 JSON 所在目录，默认 data/raw")
+    p.add_argument("--repos-dir", "-r", required=True, help="仓库根目录")
+    p.add_argument("--output", "-o", default="data/repo_mapping.json", help="输出 JSON 路径，默认 data/repo_mapping.json")
     args = p.parse_args()
     papers = load_paper_data(args.data_dir)
     create_mapping(papers, args.repos_dir, args.output)

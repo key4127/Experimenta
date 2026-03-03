@@ -4,6 +4,9 @@ notes/
 data/
 
 __pycache__/
+**/logs/
+.venv/
+tmp/
 
 # reference
 DocAgent/
