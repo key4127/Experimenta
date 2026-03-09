@@ -10,8 +10,7 @@ from pathlib import Path
 from dateutil.relativedelta import relativedelta
 
 
-# SERPER_API_KEY = os.environ.get("SERPER_DEV_API_KEY")
-SERPER_API_KEY= "ae503aa78467630836e7237339f33e04aab2fff8"
+SERPER_API_KEY = os.environ.get("SERPER_DEV_API_KEY")
 
 for key in ("HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy", "ALL_PROXY", "all_proxy"):
     os.environ.pop(key, None)

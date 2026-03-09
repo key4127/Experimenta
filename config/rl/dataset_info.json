@@ -1,0 +1,12 @@
+{
+    "dataset_name": {
+        "file_name": "/home/featurize/data/rl.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    }
+}

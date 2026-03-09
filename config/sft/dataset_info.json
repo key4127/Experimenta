@@ -1,0 +1,11 @@
+{
+    "sft": {
+        "file_name": "/home/featurize/data/sft.json",
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "response": "output",
+            "system": "system"
+        }
+    }
+}
